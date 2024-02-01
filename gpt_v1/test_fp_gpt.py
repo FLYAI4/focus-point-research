@@ -7,7 +7,7 @@ apps_path = os.path.abspath(os.path.join(__file__, os.path.pardir))
 img_path = os.path.abspath(os.path.join(apps_path, "images"))
  
 # MOCK data
-API_KEY = "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"
+API_KEY = ""
 IMAGE_PATH = os.path.abspath(os.path.join(img_path, "landscape0.png"))
 
 # Tood : 로컬 이미지가 들어왔을 때 설명 / 키워드 / 좌표 추출 

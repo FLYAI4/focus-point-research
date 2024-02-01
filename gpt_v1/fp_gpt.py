@@ -6,7 +6,7 @@ from utils import encode_image, extract_coord_keyword, refine_output, concat_all
 apps_path = os.path.abspath(os.path.join(__file__, os.path.pardir))
 img_path = os.path.abspath(os.path.join(apps_path, "images"))
 
-API_KEY = "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"
+API_KEY = ""
 IMAGE_PATH = os.path.abspath(os.path.join(img_path, "human1.png"))
 
 def focus_pointing():
