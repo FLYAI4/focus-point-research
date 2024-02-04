@@ -1,0 +1,4 @@
+.mp3
+.ipynb
+__pycache__/
+.pytest_cache/
