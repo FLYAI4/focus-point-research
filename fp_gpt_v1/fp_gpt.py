@@ -7,10 +7,9 @@ apps_path = os.path.abspath(os.path.join(__file__, os.path.pardir))
 img_path = os.path.abspath(os.path.join(apps_path, "images"))
 
 API_KEY = ""
-IMAGE_PATH = os.path.abspath(os.path.join(img_path, "human1.png"))
+IMAGE_PATH = os.path.abspath(os.path.join(img_path, "landscape0.png"))
 
 def focus_pointing():
-
     base64_image = encode_image(IMAGE_PATH)
     
     headers = {
@@ -26,7 +25,7 @@ def focus_pointing():
                 "content": [
                     {
                         "type": "text",
-                        "text" : "You are an expert art historian with vast knowledge about artists throughout history who revolutionized their craft. You will begin by briefly summarizing the personal life and achievements of the artist. Then you will go on to explain the medium, style, and influences of their works. Then you will provide short descriptions of what they depict and any notable characteristics they might have. Fianlly identify THREE keywords in the picture and provide each coordinate of the keywords in the last sentence. For example if the keyword is woman, the output must be 'woman':[[x0,y0,x1,y1]] ",
+                        "text" : "Descript this picture"
                     },
                     {
                         "type": "image_url",
@@ -41,7 +40,6 @@ def focus_pointing():
     }   
 
     response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
-    
     #응답에서 해설 추출
     content = response.json()['choices'][0]['message']['content']
 
